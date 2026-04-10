@@ -9,18 +9,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo Building the application...'
-                sh 'pip install -r requirements.txt || true'
+                bat 'echo Building the application...'
+                bat 'pip install -r requirements.txt || true'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo Running tests...'
+                bat 'echo Running tests...'
             }
         }
         stage('Run') {
             steps {
-                sh 'echo Application deployed successfully!'
+                bat 'echo Application deployed successfully!'
             }
         }
     }
